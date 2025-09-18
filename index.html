@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joe's Garage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @keyframes lsd-colors {
+        0% { filter: hue-rotate(0deg) blur(0px) contrast(1) saturate(1); }
+        25% { filter: hue-rotate(90deg) blur(5px) contrast(2) saturate(3); }
+        50% { filter: hue-rotate(180deg) blur(2px) contrast(0.5) saturate(0.5); }
+        75% { filter: hue-rotate(270deg) blur(5px) contrast(2) saturate(3); }
+        100% { filter: hue-rotate(360deg) blur(0px) contrast(1) saturate(1); }
+      }
+
+      @keyframes lsd-zoom {
+        0% { transform: scale(1) skew(0deg, 0deg); }
+        25% { transform: scale(1.2) skew(-5deg, 5deg); }
+        50% { transform: scale(0.9) skew(0deg, 0deg); }
+        75% { transform: scale(1.2) skew(5deg, -5deg); }
+        100% { transform: scale(1) skew(0deg, 0deg); }
+      }
+
+      .lsd-effect {
+        animation: lsd-colors 0.5s linear infinite, lsd-zoom 1s ease-in-out infinite;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
